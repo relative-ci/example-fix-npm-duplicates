@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 
 import { HomePage } from './pages/home';
 import { RepoDetailsPage } from './pages/repo-details';
+import { ReposPage } from './pages/repos';
 import { AboutPage } from './pages/about';
 import { NotFoundPage } from './pages/not-found';
 
@@ -20,6 +21,7 @@ export function App() {
           <Layout.Content className={css.content}>
             <Routes>
               <Route path="/repos/:owner/:repo" element={<RepoDetailsPage />} />
+              <Route path="/repos/" element={<ReposPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/" element={<HomePage />} />
               <Route path="*" element={<NotFoundPage />} />

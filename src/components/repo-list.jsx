@@ -5,8 +5,9 @@ import useSWR from 'swr';
 import { fetcher } from '../utils';
 import { Repo } from './repo';
 
-export function RepoList() {
-  const { data, error } = useSWR('/users/relative-ci/repos?sort=created&direction=desc&type=public&per_page=100', fetcher);
+export function RepoList(props) {
+  const { limit = 100 } = props;
+  const { data, error } = useSWR(`/users/relative-ci/repos?sort=created&direction=desc&type=public&per_page=${limit}`, fetcher);
 
   if (error) {
     return <Typography.Text>{error.message}</Typography.Text>;

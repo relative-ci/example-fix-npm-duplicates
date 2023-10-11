@@ -18,6 +18,11 @@ export function Header() {
               Home
             </Link>
           </Menu.Item>
+          <Menu.Item key="repos">
+            <Link to="/repos">
+              Examples
+            </Link>
+          </Menu.Item>
           <Menu.Item key="about">
             <Link to="/about">
               About
