@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Col, Row, Typography } from 'antd';
 import { formatRelative } from 'date-fns';
+import { GithubOutlined } from '@ant-design/icons';
 
 import { Icon } from '../ui/icon';
 
@@ -11,6 +12,8 @@ function DefaultTitle({ owner, repo }) {
   return (
     <Title level={5}>
       <Link to={`/repos/${owner}/${repo}/`}>
+        <GithubOutlined />
+        &nbsp;
         {repo}
       </Link>
     </Title>
@@ -21,7 +24,7 @@ export function Repo({ repo, title: TitleComponent = DefaultTitle }) {
   return (
     <article>
       {TitleComponent && (
-      <TitleComponent owner={repo.owner.login} repo={repo.name} />
+        <TitleComponent owner={repo.owner.login} repo={repo.name} />
       )}
       <Paragraph>
         {repo.description}
