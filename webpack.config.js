@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const packageInfo = require('./package.json');
+
 const SRC_DIR = path.resolve(__dirname, 'src');
 const OUT_DIR = path.resolve(__dirname, 'dist');
 
@@ -40,7 +42,7 @@ module.exports = {
   },
   plugins: [
     new HtmlPlugin({
-      title: 'Example webpack code splitting',
+      title: packageInfo.description,
       template: './index.html',
       publicPath: '/',
     }),

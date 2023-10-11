@@ -1,7 +1,7 @@
 {
   "name": "example",
   "version": "1.0.0",
-  "description": "Exemple repository",
+  "description": "RelativeCI - Exemple repository",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx .",
