@@ -1,7 +1,7 @@
 {
-  "name": "example",
+  "name": "example-fix-npm-dependencies",
   "version": "1.0.0",
-  "description": "RelativeCI - Exemple repository",
+  "description": "RelativeCI - Exemple fix npm dependencies",
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint --ext .js,.jsx .",
