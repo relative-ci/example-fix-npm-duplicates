@@ -39,5 +39,10 @@
     "react-markdown": "^8.0.0",
     "react-router-dom": "^6.2.1",
     "swr": "^1.2.1"
+  },
+  "overrides": {
+    "antd": {
+      "@ant-design/icons": "4.6.0"
+    }
   }
 }
