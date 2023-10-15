@@ -19,6 +19,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.jsx', '.js', '.json'],
+    alias: {
+      '@ant-design/icons': path.join(__dirname, 'node_modules/@ant-design/icons'),
+    },
   },
   module: {
     rules: [
